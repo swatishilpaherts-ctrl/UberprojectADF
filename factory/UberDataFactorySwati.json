@@ -1,0 +1,9 @@
+{
+	"name": "UberDataFactorySwati",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a124a064-37c8-4344-9d7d-f61b9b17510b",
+		"tenantId": "bd6f0b9e-b843-4a27-a590-56f5425fef2a"
+	}
+}
