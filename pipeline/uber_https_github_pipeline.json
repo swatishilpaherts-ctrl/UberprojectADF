@@ -52,7 +52,7 @@
 					},
 					"activities": [
 						{
-							"name": "HTTP_Ingestion_copy2",
+							"name": "HTTP_Ingestion_github_copy",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
@@ -104,7 +104,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"p_file": {
-											"value": "@{item().file}.json",
+											"value": "@item().file",
 											"type": "Expression"
 										}
 									}

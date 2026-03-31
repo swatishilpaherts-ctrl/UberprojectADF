@@ -16,10 +16,13 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@{dataset().p_file}.json",
+					"value": "@concat(\n  dataset().p_file,\n  formatDateTime(utcNow(),'yyyy'), ',',\n  formatDateTime(utcNow(),'MM'), ',',\n  formatDateTime(utcNow(),'dd'), '_',\n  '.json'\n)",
 					"type": "Expression"
 				},
-				"folderPath": "ingestion",
+				"folderPath": {
+					"value": "@concat(\n  'ingestion/',\n  'year=', formatDateTime(utcNow(),'yyyy'), '/',\n  'month=', formatDateTime(utcNow(),'MM'), '/',\n  'day=', formatDateTime(utcNow(),'dd')\n)",
+					"type": "Expression"
+				},
 				"fileSystem": "raw"
 			}
 		},
