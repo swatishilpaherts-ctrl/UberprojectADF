@@ -1,0 +1,26 @@
+{
+	"name": "Json_github_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "GitHub_HttpServer_LS",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_file": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "swatishilpaherts-ctrl/Uber_Data_Engineer_Project/refs/heads/main/Data/@{dataset().p_file}",
+					"type": "Expression"
+				}
+			}
+		},
+		"schema": {}
+	}
+}
