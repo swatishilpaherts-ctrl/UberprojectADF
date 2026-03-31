@@ -16,7 +16,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@concat(\n  dataset().p_file,'_',\n  formatDateTime(utcNow(),'yyyy'), '_',\n  formatDateTime(utcNow(),'MM'), '_',\n  formatDateTime(utcNow(),'dd'), '_',\n  '.json'\n)",
+					"value": "@concat(\n  dataset().p_file,'_',\n  formatDateTime(utcNow(),'yyyy'), '_',\n  formatDateTime(utcNow(),'MM'), '_',\n  formatDateTime(utcNow(),'dd'),\n  '.json'\n)",
 					"type": "Expression"
 				},
 				"folderPath": {
